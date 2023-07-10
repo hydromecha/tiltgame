@@ -1,0 +1,1488 @@
+// This #include statement was automatically added by the Particle IDE.
+
+uint8_t titleScreen [] = {
+0xFF, 0xFF, 0xFF, 0x7F, 0x3F, 0x3F, 0x4F, 0x8F, 0x87, 0x0F, 0x17, 0x17, 0x17, 0x27, 0x27, 0x27,
+0x47, 0x47, 0x47, 0x87, 0x87, 0x87, 0x07, 0x07, 0x07, 0x07, 0x07, 0x07, 0x07, 0x07, 0x07, 0x07,
+0x07, 0x07, 0x07, 0x07, 0x07, 0x07, 0x07, 0x07, 0x07, 0x07, 0x07, 0x07, 0x07, 0x07, 0x07, 0x07,
+0x07, 0x07, 0x07, 0x07, 0x07, 0x07, 0x0F, 0x0F, 0x1F, 0x3F, 0x7F, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x02, 0x44, 0xC4, 0x48, 0x30, 0x20,
+0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x09, 0x19, 0x19, 0x16, 0x26, 0x24, 0x20, 0x40, 0x40, 0x40,
+0x80, 0x80, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF,
+0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x01, 0x02,
+0x02, 0x04, 0x04, 0x08, 0x10, 0x90, 0xA0, 0xA0, 0x40, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x60,
+0x30, 0x10, 0x18, 0x0D, 0x05, 0x07, 0x07, 0x07, 0x06, 0x06, 0x0E, 0x1C, 0x3C, 0xF8, 0xF8, 0xF0,
+0xE0, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF,
+0xFF, 0xFF, 0xFF, 0x00, 0x00, 0xF0, 0x50, 0x20, 0x80, 0x80, 0x00, 0x80, 0x40, 0x80, 0x00, 0x80,
+0x40, 0x40, 0x00, 0x80, 0x40, 0x41, 0x02, 0x04, 0x04, 0x08, 0x10, 0x20, 0x40, 0xFE, 0xC1, 0x41,
+0x41, 0xC1, 0x81, 0x83, 0x82, 0x82, 0x82, 0x82, 0x06, 0x04, 0x04, 0x04, 0x04, 0x07, 0x03, 0x83,
+0xFF, 0xFF, 0x7E, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF,
+0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x07, 0x00, 0x00, 0xF7, 0x50, 0x00, 0xA3, 0x05, 0xC5, 0x40, 0x00,
+0xC5, 0xA5, 0xC2, 0x00, 0x05, 0x05, 0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x06,
+0x0C, 0x18, 0x10, 0x30, 0x30, 0x70, 0x70, 0x73, 0x7A, 0x7A, 0x7E, 0x3E, 0x3E, 0x1E, 0x1F, 0x0F,
+0x07, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF,
+0xFF, 0xFF, 0xFF, 0xFF, 0xFC, 0xF8, 0xF8, 0xF0, 0xF3, 0xF0, 0xF0, 0xE3, 0xE0, 0xE3, 0xE0, 0xE0,
+0xE1, 0xE2, 0xE2, 0xE0, 0xE0, 0xE0, 0xE0, 0xE0, 0xE0, 0xE0, 0xE0, 0xE0, 0xE0, 0xE0, 0xE0, 0xE0,
+0xE0, 0xE0, 0xE0, 0xE0, 0xE0, 0xE0, 0xE0, 0xE0, 0xE0, 0xE0, 0xE0, 0xE0, 0xE0, 0xE0, 0xE0, 0xE0,
+0xE0, 0xE0, 0xE0, 0xF0, 0xF0, 0xF0, 0xF0, 0xF8, 0xF8, 0xFC, 0xFE, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF
+};
+
+#include <SparkFunMMA8452Q.h>
+
+// This #include statement was automatically added by the Particle IDE.
+#include <SparkFunMicroOLED.h>
+
+//==============================Physical part declaration stuff==============================
+MMA8452Q accel;
+MicroOLED oled;
+int buttonInteract = D5;
+int buttonAttack = D4;
+int ledAttack = D3;
+//===========================================================================================
+
+
+//==============================Variables used for player==============================
+int playerSpawnX = 32;
+int playerSpawnY = 48;
+int playerX = 32;
+int playerY = 48;
+//coords for player to spawn on when entering a level and/or dieing
+int playerQ = 0;
+//determines what quarter the player is in
+//=====================================================================================
+
+
+
+
+
+//==============================Variables used for pitfalls==============================
+int pitQ1X[3];
+int pitQ1Y[3];
+//coords for pitfalls in Q1
+int pitQ2X[3];
+int pitQ2Y[3];
+//coords for pitfalls in Q2
+int pitQ3X[3];
+int pitQ3Y[3];
+//coords for pitfalls in Q3
+int pitQ4X[3];
+int pitQ4Y[3];
+//coords for pitfalls in Q4
+
+int pitQ1ArrayCounter = 0;
+int pitQ2ArrayCounter = 0;
+int pitQ3ArrayCounter = 0;
+int pitQ4ArrayCounter = 0;
+//used to assign values to pitfall array
+
+int movingPitX = 0;
+int movingPitY = 0;
+bool movingPitSpawned = false;
+bool movingPitDirection = true;
+//========================================================================================
+
+
+//==============================Variables used for collectables/powerups==============================
+int colQ1X[3];
+int colQ1Y[3];
+//coords for collectables in Q1
+int colQ2X[3];
+int colQ2Y[3];
+//coords for collectables in Q2
+int colQ3X[3];
+int colQ3Y[3];
+//coords for collectables in Q3
+int colQ4X[3];
+int colQ4Y[3];
+//coords for collectables in Q4
+
+int colQ1ArrayCounter = 0;
+int colQ2ArrayCounter = 0;
+int colQ3ArrayCounter = 0;
+int colQ4ArrayCounter = 0;
+
+bool colQ1Bool[3] = {false, false, false};//booleans to check if a collectable has been collected
+bool colQ2Bool[3] = {false, false, false};
+bool colQ3Bool[3] = {false, false, false};
+bool colQ4Bool[3] = {false, false, false};
+
+bool colQ1Made[3] = {false, false, false};//booleans used to check if a collectable has been made at a certain position in the array
+bool colQ2Made[3] = {false, false, false};
+bool colQ3Made[3] = {false, false, false};
+bool colQ4Made[3] = {false, false, false};
+
+int colGot = 0; //used to count the number of collectables obtained
+
+int reloadX = 0;
+int reloadY = 0;
+bool canFire = false;
+//=====================================================================================================
+
+//=============================Variables used for enemies=============================
+int enemyX1 = 0;
+int enemyY1 = 0;
+bool enemy1Spawned = false;
+bool enemy1Dead = false;
+int enemyX2 = 0;
+int enemyY2 = 0;
+bool enemy2Spawned = false;
+bool enemy2Dead = false;
+int enemyX3 = 0;
+int enemyY3 = 0;
+bool enemy3Spawned = false;
+bool enemy3Dead = false;
+int enemyX4 = 0;
+int enemyY4 = 0;
+bool enemy4Spawned = false;
+bool enemy4Dead = false;
+
+int bossX = 0;
+int bossY = 0;
+bool bossSpawned = false;
+bool bossDead = false;
+int bossHealth = 4;
+int bossFireCounter = 0;
+bool bossDirection = false;
+bool bossReloadSpawned = false;
+//int bossReloadTimer = 200;
+int bossReloadX = 0;
+int bossReloadY = 0;
+//====================================================================================
+
+
+//=============================Variables used for general level=============================
+int levelId = 1; //tells game what level to be on
+bool changingLevel = false;
+Timer timer(1000000, updateTime);
+int enemyCountdown = 0;
+bool doorOpen = false;
+int doorX = 0;
+int doorY = 0;
+int weightX = 0;
+int weightY = 0;
+bool weightCarry = false;
+bool weightSpawned = false;
+bool buttonPress = false;
+bool buttonPress2 = false;
+bool lastButtonInteractPress = HIGH;
+int buttonX = 0;
+int buttonY = 0;
+int buttonX2 = 0;
+int buttonY2 = 0;
+//bool levelDone = false;
+int numCollectNeeded = 99; //number of collectables needed for the door to open. It's changed for each setLevel function
+bool gameStarted = false;
+//============================================================================================
+
+
+
+
+void setup() {
+    Serial.begin(9600);
+    oled.begin();    // Initialize the OLED
+    oled.clear(ALL); // Clear the display's internal memory
+    pinMode(buttonInteract, INPUT_PULLUP);
+    pinMode(buttonAttack, INPUT_PULLUP);
+    pinMode(ledAttack, OUTPUT);
+    accel.begin(SCALE_2G, ODR_12); // Set up accel with +/-2g range, and slowest (1Hz) ODR
+    
+
+}
+
+void loop() {
+    //Serial.println(colGot);
+    if (gameStarted){
+        tiltGame();
+    }else{
+        oled.drawBitmap(titleScreen);
+        oled.display();
+        if (!digitalRead(buttonAttack)){
+            gameStarted = true;
+        }
+    }
+    
+    
+    //===All of this stuff was used for debugging===
+    // for(int j = 1; j < 5; j++) {
+    //     Serial.print((String)j + ":");
+    //     for(int i = 0; i < 3; i++) {
+    //         switch(j) {
+    //             case 1:
+    //                 Serial.print("\t" + (String)pitQ1X[i]);
+    //                 Serial.print("\t");
+    //                 Serial.print(pitQ1Y[i]);
+    //                 Serial.println("\t");
+    //                 break;
+    //             case 2:
+    //                 Serial.print("\t" + (String)pitQ2X[i]);
+    //                 Serial.print("\t");
+    //                 Serial.print(pitQ2Y[i]);
+    //                 Serial.println("\t");
+    //                 break;
+    //             case 3:
+    //                 Serial.print("\t" + (String)pitQ3X[i]);
+    //                 Serial.print("\t");
+    //                 Serial.print(pitQ3Y[i]);
+    //                 Serial.println("\t");
+    //                 break;
+    //             case 4:
+    //                 Serial.print("\t" + (String)pitQ4X[i]);
+    //                 Serial.print("\t");
+    //                 Serial.print(pitQ4Y[i]);
+    //                 Serial.println("\t");
+    //                 break;
+    //         }
+            
+    //     }
+    // }
+    //=============================================
+    
+}
+
+//=============================Functions used for moving the player=============================
+void movePlayer(){
+    //updates player coords based on values in accelerometer
+    if (accel.available()){
+        accel.read();
+        playerX = playerX + map(accel.cy * 100.0, -50, 50, 2, -2);
+        playerY = playerY + map(accel.cx * 100.0, -50, 50, 2, -2);
+        outOfBounds();
+    }
+    playerQ = whatQuarter(playerX, playerY);
+    // Serial.println("Player Quarter: " + String(playerQ)); //-----------------------------------------------------------Jon Snow was here
+    // oled.setCursor(5, 24);
+    //     oled.setFontType(0);
+    //     oled.print(accel.cx);
+    outOfBounds();
+    oled.circleFill(playerX, playerY, 3);
+}
+
+void respawnPlayer(){
+    //respawns the player at set spawn coords and resets the firing bool
+    playerX = playerSpawnX;
+    playerY = playerSpawnY;
+    canFire = false;
+    digitalWrite(ledAttack, 0);
+}
+
+void outOfBounds(){
+    //prevents the player from moving offscreen
+    if (playerX <= 2){
+        playerX++;
+    }
+    if (playerX >= 61){
+        playerX--;
+    }
+    if (playerY <= 10){
+        playerY++;
+    }
+    if (playerY >= 45){
+        playerY--;
+    }
+}
+//============================================================================================
+
+//=============================Functions used for levels=============================
+void whatLevel(){
+    switch(levelId){
+        case 1:
+            drawLevel1();
+            changeSpawn();
+            break;
+        case 2:
+            drawLevel2();
+            changeSpawn();
+            break;
+        case 3:
+            drawLevel3();
+            changeSpawn();
+            break;
+        case 4:
+            drawLevel4();
+            changeSpawn();
+            break;
+        case 5:
+            drawLevel5();
+            changeSpawn();
+            break;
+        case 6:
+            drawLevel6();
+            changeSpawn();
+            break;
+        case 7:
+            drawLevel7();
+            changeSpawn();
+            break;
+        case 8:
+            drawLevel8();
+            changeSpawn();
+            break;
+        case 9:
+            drawLevel9();
+            changeSpawn();
+            break;
+        case 10:
+            drawLevel10();
+            changeSpawn();
+            break;
+        case 11:
+            drawLevel11();
+            changeSpawn();
+            break;
+        case 12:
+            levelId = 1;
+            break;
+        default:
+            drawLevelNull();
+            changeSpawn();
+            break;
+    }
+}
+
+void drawBorders(){
+    //draws the borders of the stage and prints the current level on top
+    oled.setCursor(0,0);
+    oled.setFontType(0);
+    if (levelId != 11){
+        oled.print("Level: " + String(levelId));
+    }
+    oled.rect(0,8,64,40);
+}
+
+void drawLevelNull(){
+    levelId = 0;
+    oled.setCursor(2, 10);
+    oled.print("Unknown level. Press reset.");
+}
+
+void drawLevel1(){
+    // oled.setCursor(2,10);
+    // oled.print("Testing...");
+    playerSpawnX = 32;
+    playerSpawnY = 48;
+    numCollectNeeded = 3;
+    //oled.line(32, 8, 32, 48);
+    //oled.line(0, 28, 64, 28);
+    drawPitfall(22, 44);
+    drawPitfall(22, 35);
+    drawPitfall(22, 26);
+    drawPitfall(42, 44);
+    drawPitfall(42, 35);
+    drawPitfall(42, 26);
+    drawCollect(10, 38);//Q3 1
+    drawCollect(10, 20);//Q4 1
+    drawCollect(56, 20);//Q1 1
+    drawDoor(56, 38);
+}
+
+void drawLevel2(){
+    playerSpawnX = 48;
+    playerSpawnY = 38;
+    numCollectNeeded = 2;
+    spawnEnemy1(16,18);
+    spawnReload(48, 18);
+    drawDoor(16, 38);
+    spawnEnemy2(16,38);
+}
+
+void drawLevel3(){
+    playerSpawnX = 16;
+    playerSpawnY = 38;
+    spawnWeight(16, 18);
+    spawnButton(48, 42);
+    numCollectNeeded = 1;
+    if(buttonPress){
+        drawPitfall(30, 44);
+        drawPitfall(30, 35);
+        drawPitfall(30, 26);
+        drawPitfall(55, 26);
+        drawPitfall(46, 26);
+        drawCollect(16, 18);
+        drawDoor(59, 14);
+    }
+}
+
+void drawLevel4(){
+    playerSpawnX = 59;
+    playerSpawnY = 14;
+    numCollectNeeded = 2;
+    spawnWeight(48, 18);
+    spawnButton(48, 19);
+    spawnButton2(16, 38);
+    drawDoor(16, 18);
+    if (!buttonPress){
+        spawnEnemy1(15, 18);
+        spawnEnemy2(48, 38);
+        // spawnEnemy3(18, 18);
+        // spawnEnemy4(49, 39);
+    }
+    if (buttonPress2){
+        spawnReload(5, 42);
+    }
+}
+
+void drawLevel5(){
+    playerSpawnX = 4;
+    playerSpawnY = 12;
+    drawCollect(4,12);
+    numCollectNeeded = 1;
+    spawnWeight(4,18);
+    spawnButton(50,18);
+    drawPitfall(20, 12);
+    drawPitfall(20, 21);
+    drawPitfall(20, 30);
+    drawPitfall(60, 28);
+    drawPitfall(52, 28);
+    if (buttonPress){
+        drawDoor(32, 43);
+        drawPitfall(24, 43);
+        drawPitfall(40, 43);
+        spawnEnemy3(54, 38);
+        spawnEnemy4(10, 38);
+    }
+}
+
+void drawLevel6(){
+    playerSpawnX = 32;
+    playerSpawnY = 46;
+    spawnButton(32, 16);
+    numCollectNeeded = 1;
+    spawnWeight(12, 40);
+    drawDoor(32, 21);
+    spawnEnemy4(48,18);
+    if (buttonPress){
+        //spawnReload(32, 40);
+        spawnEnemy3(16,18);
+        drawCollect(52, 40);
+        //spawnEnemy1(16,18);
+        //spawnEnemy2(48,18);
+    }
+    
+}
+
+void drawLevel7(){
+    playerSpawnX = 20;
+    playerSpawnY = 28;
+    drawCollect(20,28);
+    numCollectNeeded = 1;
+    drawPitfall(62, 18);
+    drawPitfall(62, 38);
+    drawPitfall(50, 18);
+    drawPitfall(50, 38);
+    drawPitfall(41, 18);
+    drawPitfall(41, 38);
+    drawPitfall(32, 18);
+    drawPitfall(32, 38);
+    drawPitfall(23, 18);
+    drawPitfall(23, 38);
+    spawnButton2(10, 34);
+    spawnWeight(10, 36);
+    spawnButton(56, 34);
+    if (!buttonPress2){
+        spawnEnemy1(10, 27);
+        spawnEnemy2(10, 29);
+        spawnEnemy3(32, 18);
+        spawnEnemy4(32, 36);
+    }
+    if (buttonPress){
+        drawDoor(48, 30);
+    }
+}
+
+void drawLevel8(){
+    playerSpawnX = 8;
+    playerSpawnY = 38;
+    numCollectNeeded = 2;
+    spawnEnemy3(3, 47);
+    spawnButton(32, 28);
+    spawnWeight(32, 29);
+    spawnButton2(59, 18);
+    if (!buttonPress){
+        spawnEnemy4(3, 47);
+    }
+    if (buttonPress2){
+        drawDoor(6, 44);
+    }
+    drawCollect(59, 30);
+    drawCollect(32, 18);
+    drawPitfall(16, 45);
+    drawPitfall(16, 36);
+    drawPitfall(16, 27);
+    drawPitfall(16, 18);
+    drawPitfall(48, 11);
+    drawPitfall(48, 20);
+    drawPitfall(48, 29);
+    drawPitfall(48, 38);
+}
+
+void drawLevel9(){
+    playerSpawnX = 32;
+    playerSpawnY = 46;
+    numCollectNeeded = 1;
+    drawCollect(32,46);
+    spawnMovingPit(32, 28, 19, 45);
+    spawnButton(32, 18);
+    spawnWeight(32, 38);
+    drawPitfall(48, 45);
+    drawPitfall(16, 45);
+    drawPitfall(48, 36);
+    drawPitfall(16, 36);
+    drawPitfall(48, 27);
+    drawPitfall(16, 27);
+    if (buttonPress){
+        drawDoor(48, 18);
+    }
+}
+
+void drawLevel10(){
+    playerSpawnX = 48;
+    playerSpawnY = 18;
+    spawnButton(48, 18);
+    numCollectNeeded = 1;
+    drawCollect(48, 18);
+    if (!bossDead){
+        spawnBoss(18, 28);
+    }else{
+        spawnWeight(bossX, bossY);
+        if (buttonPress){
+            drawDoor(16, 28);
+        }
+        
+    }
+}
+
+void drawLevel11(){
+    playerSpawnX = 32;
+    playerSpawnY = 48;
+    numCollectNeeded = 1;
+    drawCollect(54, 40);
+    drawDoor(54, 27);
+    oled.setCursor(0,0);
+    oled.setFontType(0);
+    oled.print("You won!");
+    oled.setCursor(4, 10);
+    oled.print("Enter the");
+    oled.setCursor(4, 18);
+    oled.print("door to");
+    oled.setCursor(4, 26);
+    oled.print("restart");
+}
+
+//===Level making guide===
+//REMEMBER TO ADD TO THE SWITCH STATEMENT
+//playerSpawnX = player's spawn X coord
+//playerSpawnY = player's spawn Y coord --|Player spawn coords are usually the previous level's door coords
+//numCollectNeeded = number of collectables player needs to get
+//drawDoor(X, Y) spawns door --|9 x 9 pixels
+//drawPitFall(X, Y) spawns pitfall --|Only 3 pitfalls per quarter, 9 x 9 pixels
+//drawCollect(X, Y) spawns collectable --|Only 3 collectables per quarter, 7 x 7 pixels
+//spawnEnemy1(X, Y) spawns an enemy --|Enemies drop collectables upon being defeated. Enemies won't respawn if they've been killed. 9 x 7 pixels for all enemies
+//spawnEnemy2(X, Y), spawnEnemy3(X, Y), spawnEnemy4(X, Y) --|There can only be up to 4 enemies on screen at a time
+//spawnReload(X, Y) spawns a reload powerup, which lets the player shoot enemies --|6 x 6 pixels
+//spawnWeight(X, Y) spawns a weight item, which the player picks up and places on one of two buttons --|7 x 7 pixels
+//spawnButton(X, Y) spawns the first button --|13 x 4 pixels for both buttons
+//buttonPress boolean that becomes true if the first button is pressed
+//spawnButton2(X, Y) spawns the second button
+//buttonPress2 boolean that becomes true if the second button is pressed
+//spawnMovingPit(X, Y) spawns a pitfall that moves left and right
+//The top border is at Y = 8
+//====================================================================================================================
+
+//=============================Functions used for pitfalls=============================
+void drawPitfall(int pitX, int pitY){
+    //places a pitfall at inputted coords
+    oled.circle(pitX, pitY, 4);
+    Particle.process();
+    switch(whatQuarter(pitX, pitY)){
+        case 1:
+            if (overflowArray(3, pitQ1ArrayCounter)){
+                pitQ1ArrayCounter = 0;
+            }
+            pitQ1X[pitQ1ArrayCounter] = pitX;
+            pitQ1Y[pitQ1ArrayCounter] = pitY;
+            pitQ1ArrayCounter++;
+            break;
+        case 2:
+            if (overflowArray(3, pitQ2ArrayCounter)){
+                pitQ2ArrayCounter = 0;
+            }
+            pitQ2X[pitQ2ArrayCounter] = pitX;
+            pitQ2Y[pitQ2ArrayCounter] = pitY;
+            pitQ2ArrayCounter++;
+            break;
+        case 3:
+            if (overflowArray(3, pitQ3ArrayCounter)){
+                pitQ3ArrayCounter = 0;
+            }
+            pitQ3X[pitQ3ArrayCounter] = pitX;
+            pitQ3Y[pitQ3ArrayCounter] = pitY;
+            pitQ3ArrayCounter++;
+            break;
+        case 4:
+            if (overflowArray(3, pitQ4ArrayCounter)){  //I FOUND THE PROBLEM. THIS IS EVALUATING TO TRUE :(
+                pitQ4ArrayCounter = 0;
+                // Serial.println("here?");
+            }
+            // Serial.print("\t\t case 4 \t");
+            // Serial.print(pitQ4ArrayCounter);
+            pitQ4X[pitQ4ArrayCounter] = pitX;
+            pitQ4Y[pitQ4ArrayCounter] = pitY;
+            // Serial.print("Before:\t" + (String)pitQ4ArrayCounter + "\t");
+            pitQ4ArrayCounter++;
+            // Serial.println("After:\t" + (String)pitQ4ArrayCounter);
+            // Serial.println("\t It should be counting here.");
+            break;
+        default:
+            break;
+    }
+}
+
+void pitfallCollision(){
+    //if a player has collided with a pitfall, the player respawns
+    for (int i = 0; i < 3; i++){
+        if (playerQ == 1){
+            if(collisionCheck(pitQ1X[i], pitQ1Y[i])){
+                respawnPlayer();
+            }
+        }else if (playerQ == 2){
+            if (collisionCheck(pitQ2X[i], pitQ2Y[i])){
+                respawnPlayer();
+            }
+        }else if (playerQ == 3){
+            if(collisionCheck(pitQ3X[i], pitQ3Y[i])){
+                respawnPlayer();
+            }
+        }else if (playerQ == 4){
+            if (collisionCheck(pitQ4X[i], pitQ4Y[i])){
+                respawnPlayer();
+            }
+        }
+    }
+}
+
+void spawnMovingPit(int inputX,int inputY, int limitL, int limitR){
+    if(!movingPitSpawned){
+        movingPitX = inputX;
+        movingPitY = inputY;
+        movingPitSpawned = true;
+    }else{
+        if (enemyCountdown % 2 == 0){
+            if (movingPitDirection){
+                movingPitX++;
+            }else{
+                movingPitX--;
+            }
+        }
+    }
+    if (movingPitX <= limitL){
+        movingPitDirection = true;
+    }else if (movingPitX >= limitR){
+        movingPitDirection = false;
+    }
+    oled.circle(movingPitX, movingPitY, 3);
+    if (collisionCheck(movingPitX, movingPitY)){
+        respawnPlayer();
+    }
+}
+//=======================================================================================
+
+//=============================Functions used for collectables=============================
+void drawCollectable(int colX, int colY){
+    //draws the actual collectable
+    oled.line(colX - 3, colY, colX + 4, colY);
+    oled.line(colX, colY - 3, colX, colY + 4);
+    oled.rect(colX - 1, colY - 1, 3, 3);
+}
+
+void drawCollect(int colX, int colY){
+    //draws a collectable at inputted coords and sets collision parameters
+    for (int i = 0; i < 3; i++){
+        if (whatQuarter(colX, colY) == 1){
+            if(!colQ1Bool[i] && colQ1Made[i]){
+                drawCollectable(colX, colY);
+            }
+        }else if (whatQuarter(colX, colY) == 2){
+            if (!colQ2Bool[i] && colQ1Made[i]){
+                drawCollectable(colX, colY);
+            }
+        }else if (whatQuarter(colX, colY) == 3){
+            if(!colQ3Bool[i] && colQ1Made[i]){
+                drawCollectable(colX, colY);
+            }
+        }else if (whatQuarter(colX, colY) == 4){
+            if (!colQ4Bool[i] && colQ1Made[i]){
+                drawCollectable(colX, colY);
+            }
+        }
+    }
+    
+    switch(whatQuarter(colX, colY)){
+        case 1:
+            if (overflowArray(3, colQ1ArrayCounter)){
+                colQ1ArrayCounter = 0;
+            }
+            if (colQ1ArrayCounter > 0){
+                if (colQ1X[colQ1ArrayCounter - 1] != colX && colQ1X[colQ1ArrayCounter - 1] != colY){
+                    colQ1X[colQ1ArrayCounter] = colX;
+                    colQ1Y[colQ1ArrayCounter] = colY;
+                    colQ1Made[colQ1ArrayCounter] = true;
+                    colQ1ArrayCounter++;
+                }
+            }else{
+                colQ1X[colQ1ArrayCounter] = colX;
+                colQ1Y[colQ1ArrayCounter] = colY;
+                colQ1Made[colQ1ArrayCounter] = true;
+                colQ1ArrayCounter++; 
+            }
+            break;
+        case 2:
+            if (overflowArray(3, colQ2ArrayCounter)){
+                colQ2ArrayCounter = 0;
+            }
+            if (colQ2ArrayCounter > 0){
+                if (colQ2X[colQ2ArrayCounter - 1] != colX && colQ2X[colQ2ArrayCounter - 1] != colY){
+                    colQ2X[colQ2ArrayCounter] = colX;
+                    colQ2Y[colQ2ArrayCounter] = colY;
+                    colQ1Made[colQ2ArrayCounter] = true;
+                    colQ2ArrayCounter++;
+                }
+            }else{
+                colQ2X[colQ2ArrayCounter] = colX;
+                colQ2Y[colQ2ArrayCounter] = colY;
+                colQ1Made[colQ2ArrayCounter] = true;
+                colQ2ArrayCounter++; 
+            }
+            break;
+        case 3:
+            if (overflowArray(3, colQ3ArrayCounter)){
+                colQ3ArrayCounter = 0;
+            }
+            if (colQ3ArrayCounter > 0){
+                if (colQ3X[colQ3ArrayCounter - 1] != colX && colQ3X[colQ3ArrayCounter - 1] != colY){
+                    colQ3X[colQ3ArrayCounter] = colX;
+                    colQ3Y[colQ3ArrayCounter] = colY;
+                    colQ1Made[colQ3ArrayCounter] = true;
+                    colQ3ArrayCounter++;
+                }
+            }else{
+                colQ3X[colQ3ArrayCounter] = colX;
+                colQ3Y[colQ3ArrayCounter] = colY;
+                colQ1Made[colQ3ArrayCounter] = true;
+                colQ3ArrayCounter++; 
+            }
+            break;
+        case 4:
+            if (overflowArray(3, colQ4ArrayCounter)){
+                colQ4ArrayCounter = 0;
+            }
+            if (colQ4ArrayCounter > 0){
+                if (colQ4X[colQ4ArrayCounter - 1] != colX && colQ4X[colQ4ArrayCounter - 1] != colY){
+                    colQ4X[colQ4ArrayCounter] = colX;
+                    colQ4Y[colQ4ArrayCounter] = colY;
+                    colQ1Made[colQ4ArrayCounter] = true;
+                    colQ4ArrayCounter++;
+                }
+            }else{
+                colQ4X[colQ4ArrayCounter] = colX;
+                colQ4Y[colQ4ArrayCounter] = colY;
+                colQ1Made[colQ4ArrayCounter] = true;
+                colQ4ArrayCounter++; 
+            }
+            break;
+        default:
+            break;
+    }
+}
+
+void collectCollision(){
+    //if a player has collided with a collectable, increases the collected amount by 1 and makes it so the player can't colect the same collectable twice
+    for (int i = 0; i < 3; i++){
+        if (playerQ == 1){
+            if(collisionCheck(colQ1X[i], colQ1Y[i]) && !colQ1Bool[i]){
+                colQ1Bool[i] = true;
+                colGot++;
+            }
+        }else if (playerQ == 2){
+            if (collisionCheck(colQ2X[i], colQ2Y[i]) && !colQ2Bool[i]){
+                colQ2Bool[i] = true;
+                colGot++;
+            }
+        }else if (playerQ == 3){
+            if(collisionCheck(colQ3X[i], colQ3Y[i]) && !colQ3Bool[i]){
+                colQ3Bool[i] = true;
+                colGot++;
+            }
+        }else if (playerQ == 4){
+            if (collisionCheck(colQ4X[i], colQ4Y[i]) && !colQ4Bool[i]){
+                colQ4Bool[i] = true;
+                colGot++;
+            }
+        }
+    }
+}
+//====================================================================================================================
+
+//=============================Functions for the door=============================
+void drawDoor(int inputDoorX, int inputDoorY){
+    //spawns a door
+    doorX = inputDoorX;
+    doorY = inputDoorY;
+    if(doorOpen){
+        drawDoorOpen(inputDoorX, inputDoorY);
+    }else{
+        drawDoorLocked(inputDoorX, inputDoorY);
+    }
+}
+
+void drawDoorLocked(int inputDoorX,int inputDoorY){
+    //draw a closed door, with a key icon indicating that it's closed
+    drawDoorFrame(inputDoorX, inputDoorY);
+    oled.line(inputDoorX, inputDoorY - 1, inputDoorX, inputDoorY + 3);
+    oled.pixel(inputDoorX, inputDoorY - 3);
+    oled.pixel(inputDoorX - 1, inputDoorY - 2);
+    oled.pixel(inputDoorX + 1, inputDoorY - 2);
+    oled.pixel(inputDoorX - 1, inputDoorY);
+    oled.pixel(inputDoorX - 1, inputDoorY + 2);
+}
+
+void drawDoorOpen(int inputDoorX, int inputDoorY){
+    //draws an open door, with an arrow icon indicating that it's open
+    drawDoorFrame(inputDoorX, inputDoorY);
+    oled.line(inputDoorX, inputDoorY - 2, inputDoorX, inputDoorY + 3);
+    //oled.line(inputDoorX, inputDoorY - 3, inputDoorX - 3, inputDoorY); why doesn't this stuff here work
+    oled.line(inputDoorX + 3, inputDoorY, inputDoorX, inputDoorY - 3);
+    //oled.line(inputDoorX - 3, inputDoorY, inputDoorX, inputDoorY - 3); why the heck doesn't this work either
+    oled.pixel(inputDoorX - 2, inputDoorY - 1);
+    oled.pixel(inputDoorX - 1, inputDoorY - 2);
+}
+
+void drawDoorFrame(int frameX,int frameY){
+    //draws the frame of the door
+    oled.line(frameX - 3, frameY - 5, frameX + 4, frameY - 5);
+    oled.pixel(frameX - 3, frameY - 4);
+    oled.pixel(frameX + 3, frameY - 4);
+    oled.line(frameX - 4, frameY - 4, frameX - 4, frameY + 4);
+    oled.line(frameX + 4, frameY - 4, frameX + 4, frameY + 4);
+    oled.line(frameX - 4, frameY + 4, frameX + 5, frameY + 4);
+}
+
+void openDoorYet(){
+    //opens the door, gets on the floor, and walks the dinosaur if the player has gotten enough collectables
+    if(colGot == numCollectNeeded){
+        doorOpen = true;
+    }
+}
+
+void doorCollision(){
+    //checks for collision between the player and the door if it's open
+    if(doorOpen){
+        if(collisionCheck(doorX, doorY)){
+            nextLevel();
+        }
+    }
+}
+
+//=========================================================================================
+
+//=============================Functions used for enemies and shooting them=============================
+void spawnEnemy1(int inputX, int inputY){
+    //spawns an enemy
+    if (!enemy1Dead){
+        if (!enemy1Spawned){
+            enemyX1 = inputX;
+            enemyY1 = inputY;
+            enemy1Spawned = !enemy1Spawned;
+        }else{
+            if (updateEnemyCountdown()){
+                enemyX1 = enemyX1 + (playerX - enemyX1)/3;
+                enemyY1 = enemyY1 + (playerY - enemyY1)/3;
+                enemyX1 = enemyX1 - enemyOverlap(enemyX2, enemyX1) - enemyOverlap(enemyX1, enemyX3) - enemyOverlap(enemyX1, enemyX4);
+                enemyY1 = enemyY1 - enemyOverlap(enemyY2, enemyY1) - enemyOverlap(enemyX1, enemyX3) - enemyOverlap(enemyX1, enemyX4);
+            }
+        }
+        drawEnemy(enemyX1, enemyY1);
+    }else{
+        drawCollect(enemyX1, enemyY1);
+    }
+}
+//the next three functions are identical to spawnEnemy1(). Since there can only ever be 4 enemies on screen, it would've been a waste of time to add array stuff for the enemies
+void spawnEnemy2(int inputX, int inputY){
+    if (!enemy2Dead){
+        if (!enemy2Spawned){
+            enemyX2 = inputX;
+            enemyY2 = inputY;
+            enemy2Spawned = !enemy2Spawned;
+        }else{
+            if (updateEnemyCountdown()){
+                enemyX2 = enemyX2 + (playerX - enemyX2)/3;
+                enemyY2 = enemyY2 + (playerY - enemyY2)/3;
+                enemyX2 = enemyX2 - enemyOverlap(enemyX2, enemyX1) - enemyOverlap(enemyX2, enemyX3) - enemyOverlap(enemyX2, enemyX4);
+                enemyY2 = enemyY2 - enemyOverlap(enemyY2, enemyY1) - enemyOverlap(enemyY2, enemyY3) - enemyOverlap(enemyY2, enemyY4);
+            }
+        }
+        drawEnemy(enemyX2, enemyY2);
+    }else{
+        drawCollect(enemyX2, enemyY2);
+    }
+}
+
+void spawnEnemy3(int inputX, int inputY){
+    if (!enemy3Dead){
+        if (!enemy3Spawned){
+            enemyX3 = inputX;
+            enemyY3 = inputY;
+            enemy3Spawned = !enemy3Spawned;
+        }else{
+            if (updateEnemyCountdown()){
+                enemyX3 = enemyX3 + (playerX - enemyX3)/2;
+                enemyY3 = enemyY3 + (playerY - enemyY3)/2;
+                enemyX3 = enemyX3 - enemyOverlap(enemyX3, enemyX1) - enemyOverlap(enemyX3, enemyX2) - enemyOverlap(enemyX3, enemyX4);
+                enemyY3 = enemyY3 - enemyOverlap(enemyY3, enemyY1) - enemyOverlap(enemyY3, enemyY2) - enemyOverlap(enemyY3, enemyY4);
+            }
+        }
+        oled.circle(enemyX3, enemyY3, 3);
+        drawEnemy(enemyX3, enemyY3);
+    }else{
+        //drawCollect(enemyX4, enemyY4);
+    }
+}
+
+void spawnEnemy4(int inputX, int inputY){
+    if (!enemy4Dead){
+        if (!enemy4Spawned){
+            enemyX4 = inputX;
+            enemyY4 = inputY;
+            enemy4Spawned = !enemy4Spawned;
+        }else{
+            if (updateEnemyCountdown()){
+                enemyX4 = enemyX4 + (playerX - enemyX4)/2;
+                enemyY4 = enemyY4 + (playerY - enemyY4)/2;
+                enemyX4 = enemyX4 - enemyOverlap(enemyX4, enemyX1) - enemyOverlap(enemyX4, enemyX3) - enemyOverlap(enemyX4, enemyX1);
+                enemyY4 = enemyY4 - enemyOverlap(enemyY4, enemyY1) - enemyOverlap(enemyY4, enemyY3) - enemyOverlap(enemyY4, enemyY1);
+            }
+        }
+        oled.circle(enemyX4, enemyY4, 3);
+        drawEnemy(enemyX4, enemyY4);
+    }else{
+        //drawCollect(enemyX4, enemyY4);
+    }
+}
+
+int enemyOverlap(int input1,int input2){
+    //returns a number if two inputs match. Used to move enemies away from each other if they overlap
+    if (input1 == input2){
+        return random(4, 10);
+    }else{
+        return 0;
+    }
+}
+
+void drawEnemy(int inputX, int inputY){
+    //draws an enemy sprite at given coords
+    oled.rect(inputX - 2, inputY - 1, 5, 3);
+    oled.line(inputX, inputY - 2, inputX, inputY + 3);
+    oled.pixel(inputX - 1, inputY - 3);
+    oled.pixel(inputX + 1, inputY - 3);
+    oled.pixel(inputX - 1, inputY + 3);
+    oled.pixel(inputX + 1, inputY + 3);
+    oled.pixel(inputX - 3, inputY);
+    oled.pixel(inputX + 3, inputY);
+    oled.pixel(inputX - 4, inputY - 1);
+    oled.pixel(inputX - 4, inputY + 1);
+    oled.pixel(inputX + 4, inputY - 1);
+    oled.pixel(inputX + 4, inputY + 1);
+}
+
+bool updateEnemyCountdown(){
+    //keeps track of enemy time stuff for movement
+    return(enemyCountdown % 200 == 0);
+}
+
+void enemyCollision(){
+    //checks to see if the player has hit an enemy
+    if (collisionCheck(enemyX1, enemyY1) && !enemy1Dead){
+        respawnPlayer();
+        respawnEnemies();
+    }else if(collisionCheck(enemyX2, enemyY2) && !enemy2Dead){
+        respawnPlayer();
+        respawnEnemies();
+    }else if(collisionCheck(enemyX3, enemyY3) && !enemy3Dead){
+        respawnPlayer();
+        respawnEnemies();
+    }else if(collisionCheck(enemyX4, enemyY4) && !enemy4Dead){
+        respawnPlayer();
+        
+    }
+}
+
+void respawnEnemies(){
+    //resets enemy positions and deaths
+    enemy1Spawned = false;
+    enemy1Dead = false;
+    enemy2Spawned = false;
+    enemy2Dead = false;
+    enemy3Spawned = false;
+    enemy3Dead = false;
+    enemy4Spawned = false;
+    enemy4Dead = false;
+}
+
+void spawnReload(int inputX,int inputY){
+    //spawns the reload powerup box at given coords. There may only be one reload powerup per level
+    reloadX = inputX;
+    reloadY = inputY;
+    drawReload(reloadX, reloadY);
+}
+
+void drawReload(int inputX,int inputY){
+    //draws the reload powerup at inputted coords
+    oled.line(inputX - 2, inputY - 3, inputX + 3, inputY - 3);
+    oled.line(inputX - 3, inputY - 2, inputX - 3, inputY + 3);
+    oled.line(inputX + 3, inputY - 2, inputX + 3, inputY + 3);
+    oled.line(inputX - 2, inputY + 3, inputX + 3, inputY + 3);
+    oled.pixel(inputX - 1, inputY);
+    oled.pixel(inputX + 1, inputY);
+    oled.pixel(inputX, inputY - 1);
+    oled.pixel(inputX, inputY + 1);
+    oled.pixel(inputX + 1, inputY - 1);
+    oled.pixel(inputX - 1, inputY + 1);
+}
+
+void shootEnemy(){
+    //fires a laser line thing at an enemy if the button is pressed if enemies are present, given that the player has touched the reload powerup
+    if (canFire && !weightCarry){
+        digitalWrite(ledAttack, HIGH);
+    }
+    if (canFire && !digitalRead(buttonAttack) && !weightCarry){
+        //the player can't shoot at the enemies if a weight is being carried
+        if (enemy1Spawned && !enemy1Dead){
+            oled.line(playerX, playerY, enemyX1, enemyY1);
+            enemy1Dead = true;
+        }
+        if (enemy2Spawned && !enemy2Dead){
+            oled.line(playerX, playerY, enemyX2, enemyY2);
+            enemy2Dead = true;
+        }
+        if (enemy3Spawned && !enemy3Dead){
+            oled.line(playerX, playerY, enemyX3, enemyY3);
+            enemy3Dead = true;
+        }
+        if (enemy3Spawned && !enemy4Dead){
+            oled.line(playerX, playerY, enemyX3, enemyY3);
+            enemy4Dead = true;
+        }
+        if (bossSpawned && !bossDead){
+            oled.line(playerX, playerY, bossX, bossY);
+            bossHealth--;
+        }
+        canFire = false;
+        digitalWrite(ledAttack, 0);
+    }
+}
+
+void reloadCollision(){
+    //checks for collision between the player and the reload box
+    if (collisionCheck(reloadX, reloadY) && !canFire){
+        canFire = true;
+    }
+}
+
+void spawnBoss(int inputX,int inputY){
+    if (!bossDead){
+        if (!bossSpawned){
+            bossX = inputX;
+            bossY = inputY;
+            bossSpawned = true;
+        }else{
+            if (enemyCountdown % 2 == 0){
+                if (!bossDirection){
+                    bossY++;
+                }else{
+                    bossY--;
+                }
+            }
+        }
+        if (bossY <= 18){
+            bossDirection = false;
+        }else if (bossY >= 40){
+            bossDirection = true;
+        }
+        if (collisionCheck(bossX, bossY)){
+            respawnPlayer();
+        }
+        bossShoot();
+        drawBoss(bossX, bossY);
+    }
+    if (bossHealth == 0){
+        bossDead = true;
+    }
+}
+
+void bossShoot(){
+    //if (enemyCountdown % 5 == 0)//{
+        //if (bossCanShoot){
+            spawnMovingPit(bossX, bossY, bossX, 64);
+            //bossCanShoot = false;
+        //}
+        
+        //}//else{
+        //     
+        // }
+        
+    //}
+    if (movingPitX == 64){
+            movingPitSpawned = false;
+            bossFireCounter++;
+            //bossCanShoot = true;
+            if (bossFireCounter == 3){
+                bossFireCounter = 0;
+                bossReloadSpawned = !bossReloadSpawned;
+                bossReloadX = 48;
+                bossReloadY = movingPitY;
+            //spawnMovingPit(0,0,0,0);
+            }else{
+                bossReloadX = 48;
+                bossReloadY = movingPitY; 
+            }
+        
+    }
+    if (bossReloadSpawned){
+            spawnReload(bossReloadX, bossReloadY);
+            if(canFire){
+                //bossReloadSpawned = false;
+                spawnReload(64,64);
+            }
+        }else{
+            spawnReload(64,64);
+        }
+}
+
+void drawBoss(int inputX,int inputY){
+    oled.line(inputX - 15, inputY - 5, inputX - 15, inputY + 6);
+    oled.line(inputX - 14, inputY - 6, inputX - 12, inputY - 6);
+    oled.pixel(inputX - 12, inputY - 5);
+    oled.pixel(inputX - 11, inputY - 4);
+    oled.line(inputX - 10, inputY - 3, inputX - 7, inputY - 3);
+    oled.pixel(inputX - 7, inputY - 4);
+    oled.line(inputX - 6, inputY - 4, inputX - 6, inputY - 9);
+    oled.pixel(inputX - 5, inputY - 10);
+    oled.line(inputX - 4, inputY - 11, inputX - 2, inputY - 11);
+    oled.line(inputX - 2, inputY - 12, inputX + 7, inputY - 12);
+    oled.pixel(inputX + 7, inputY - 11);
+    oled.pixel(inputX + 8, inputY - 10);
+    oled.line(inputX + 9, inputY - 9, inputX + 9, inputY - 6);
+    oled.line(inputX + 10, inputY - 6, inputX + 10, inputY - 4);
+    oled.pixel(inputX + 11, inputY - 4);
+    oled.line(inputX - 3, inputY - 3, inputX + 12, inputY - 3);//upperjaw
+    oled.pixel(inputX - 4, inputY - 2);
+    oled.line(inputX - 3, inputY - 3, inputX - 3, inputY + 1);
+    oled.pixel(inputX - 2, inputY + 1);
+    oled.line(inputX - 1, inputY + 1, inputX - 1, inputY - 3);
+    oled.pixel(inputX, inputY - 2);
+    oled.pixel(inputX + 1, inputY - 1);
+    oled.pixel(inputX + 1, inputY - 6);//eye
+    oled.pixel(inputX + 2, inputY - 2);
+    oled.pixel(inputX + 3, inputY - 1);
+    oled.pixel(inputX + 4, inputY - 2);
+    oled.pixel(inputX + 5, inputY - 1);
+    oled.pixel(inputX + 6, inputY - 2);
+    oled.pixel(inputX + 7, inputY - 1);
+    oled.pixel(inputX + 7, inputY - 6);//eye
+    oled.pixel(inputX + 8, inputY - 2);
+    oled.line(inputX + 9, inputY - 2, inputX + 9, inputY + 1);
+    oled.pixel(inputX + 10, inputY + 1);
+    oled.line(inputX + 11, inputY - 2, inputX + 11, inputY + 1);
+    oled.line(inputX - 5, inputY - 1, inputX - 5, inputY + 3);
+    oled.line(inputX - 4, inputY + 3, inputX - 2, inputY + 3);
+    oled.pixel(inputX + 8, inputY + 3);
+    oled.pixel(inputX + 7, inputY + 2);
+    oled.pixel(inputX + 6, inputY + 3);
+    oled.pixel(inputX + 5, inputY + 2);
+    oled.pixel(inputX + 4, inputY + 3);
+    oled.pixel(inputX + 3, inputY + 2);
+    oled.pixel(inputX + 2, inputY + 3);
+    oled.pixel(inputX + 1, inputY + 2);
+    oled.pixel(inputX, inputY + 3);
+    oled.line(inputX - 2, inputY + 4, inputX + 10, inputY + 4);
+    oled.line(inputX + 10, inputY + 4, inputX + 4, inputY + 10);
+    oled.line(inputX + 4, inputY + 10, inputX - 1, inputY + 10);
+    oled.line(inputX - 1, inputY + 10, inputX - 5, inputY + 6);
+    oled.line(inputX - 5, inputY + 6, inputX - 6, inputY + 6);
+    oled.line(inputX - 6, inputY + 5, inputX - 8, inputY + 5);
+    oled.line(inputX - 8, inputY + 4, inputX - 10, inputY + 4);
+    
+    oled.line(inputX - 9, inputY + 1, inputX - 7, inputY + 1);
+    oled.pixel(inputX - 10, inputY);
+    oled.pixel(inputX - 7, inputY);
+    
+    oled.line(inputX - 10, inputY + 5, inputX - 12, inputY + 5);
+    oled.line(inputX - 12, inputY + 6, inputX - 14, inputY + 6);
+    
+    
+}
+
+//====================================================================================================================
+
+//=============================Functions used for the weight and buttons=============================
+void spawnWeight(int inputX, int inputY){
+    //spawns the weight item
+    if(!weightSpawned){
+        weightX = inputX;
+        weightY = inputY;
+        weightSpawned = true;
+    }
+    if (!weightCarry){
+        if (weightButtonCollision() == 0){
+            buttonPress = false;
+            buttonPress2 = false;
+        }else if (weightButtonCollision() == 1){
+            weightX = buttonX;
+            weightY = buttonY - 5;
+            buttonPress = true;
+        }else if (weightButtonCollision() == 2){
+            weightX = buttonX2;
+            weightY = buttonY2 - 5;
+            buttonPress2 = true;
+        }
+    }else{
+        //if (updateEnemyCountdown()){
+            weightX = weightX + (playerX - weightX)/3;
+            weightY = weightY + (playerY - weightY)/3;
+            buttonPress = false;
+            buttonPress2 = false;
+        //}
+    }
+    drawWeight(weightX, weightY);
+    if(collisionCheck(weightX, weightY)){
+        //if the player is over the weight and presses the interact button, the player starts carrying the weight
+        if (digitalRead(buttonInteract) != lastButtonInteractPress){
+            lastButtonInteractPress = digitalRead(buttonInteract);
+            if (!digitalRead(buttonInteract)){
+                //Serial.println("buttonInteract pressed");
+                weightCarry = !weightCarry;
+            }
+        }
+    }
+        
+}
+
+int weightButtonCollision(){
+    //checks to see which button the weight is closest to
+    if (abs(buttonX - weightX) <= 5 && abs(buttonY - weightY) <= 5){
+        return 1;
+    }else if (abs(buttonX2 - weightX) <= 5 && abs(buttonY2 - weightY) <= 5){
+        return 2;
+    }
+    else{
+        return 0;
+    }
+    
+}
+
+void drawWeight(int inputX, int inputY){
+    //draws the weight item
+    oled.pixel(inputX, inputY);
+    oled.pixel(inputX - 2, inputY - 2);
+    oled.pixel(inputX + 2, inputY - 2);
+    oled.line(inputX - 1, inputY - 3, inputX + 2, inputY - 3);
+    oled.line(inputX - 3, inputY - 1, inputX - 3, inputY + 3);
+    oled.line(inputX + 3, inputY - 1, inputX + 3, inputY + 3);
+    oled.line(inputX - 3, inputY + 3, inputX + 4, inputY + 3);
+}
+
+void spawnButton(int inputX, int inputY){
+    //spawns a button at given coords
+    buttonX = inputX;
+    buttonY = inputY;
+    drawButtonBase(inputX, inputY);
+    if (buttonPress){
+        drawButtonDown(inputX, inputY);
+    }else{
+        drawButtonUp(inputX, inputY);
+    }
+}
+
+void spawnButton2(int inputX, int inputY){
+    //spawns a second button at given coords. Since there can only ever be two buttons on screen at a time, it would've been a waste of time to make array stuff for the buttons
+    buttonX2 = inputX;
+    buttonY2 = inputY;
+    drawButtonBase(inputX, inputY);
+    if (buttonPress2){
+        drawButtonDown(inputX, inputY);
+    }else{
+        drawButtonUp(inputX, inputY);
+    }
+}
+
+void drawButtonDown(int inputX, int inputY){
+    //draws the button in a pressed position
+    oled.line(inputX - 4, inputY - 1, inputX + 5, inputY - 1);
+}
+
+void drawButtonUp(int inputX, int inputY){
+    //draws the button in an up position
+    oled.pixel(inputX - 4, inputY - 1);
+    oled.pixel(inputX + 4, inputY - 1);
+    oled.line(inputX - 3, inputY - 2, inputX + 4, inputY - 2);
+}
+
+void drawButtonBase(int inputX, int inputY){
+    //draws the base of a button
+    oled.line(inputX - 6, inputY + 1, inputX + 7, inputY + 1);
+    oled.pixel(inputX - 6, inputY);
+    oled.pixel(inputX + 6, inputY);
+}
+//=======================================================================================
+
+//==============================Misc. functions==============================
+void updateTime(){
+    //updates timer stuff
+    if (enemyCountdown == 0){
+        enemyCountdown = 200;
+    }
+    enemyCountdown--;
+    // if (bossReloadSpawned){
+    //     bossReloadTimer--;
+    //     if (bossReloadTimer == 0){
+    //         bossReloadSpawned = false;
+    //         bossReloadTimer = 200;
+    //     }
+    // }
+}
+
+void nextLevel(){
+    //resets all variables for the next level
+    doorOpen = false;
+    digitalWrite(ledAttack, 0);
+    canFire = false;
+    levelId++;
+    colGot = 0;
+    for (int i = 0; i < 3; i++){
+        pitQ1X[i] = 0;
+        pitQ1Y[i] = 0;
+        pitQ2X[i] = 0;
+        pitQ2Y[i] = 0;
+        pitQ3X[i] = 0;
+        pitQ3Y[i] = 0;
+        pitQ4X[i] = 0;
+        pitQ4Y[i] = 0;
+        colQ1Bool[i] = false;
+        colQ2Bool[i] = false;
+        colQ3Bool[i] = false;
+        colQ4Bool[i] = false;
+        colQ1X[i] = 0;
+        colQ1Y[i] = 0;
+        colQ2X[i] = 0;
+        colQ2Y[i] = 0;
+        colQ3X[i] = 0;
+        colQ3Y[i] = 0;
+        colQ4X[i] = 0;
+        colQ4Y[i] = 0;
+        colQ1Made[i] = 0;
+        colQ2Made[i] = 0;
+        colQ3Made[i] = 0;
+        colQ4Made[i] = 0;
+    }
+    pitQ1ArrayCounter = 0;
+    pitQ2ArrayCounter = 0;
+    pitQ3ArrayCounter = 0;
+    pitQ4ArrayCounter = 0;
+    colQ1ArrayCounter = 0;
+    colQ2ArrayCounter = 0;
+    colQ3ArrayCounter = 0;
+    colQ4ArrayCounter = 0;
+    enemyX1 = 0;
+    enemyY1 = 0;
+    enemyX2 = 0;
+    enemyY2 = 0;
+    enemyX3 = 0;
+    enemyY3 = 0;
+    enemyX4 = 0;
+    enemyY4 = 0;
+    doorX = 0;
+    doorY = 0;
+    reloadX = 0;
+    reloadY = 0;
+    weightX = 0;
+    weightY = 0;
+    weightSpawned = false;
+    weightCarry = false;
+    buttonPress = false;
+    buttonPress2 = false;
+    changingLevel = true;
+    buttonX = 0;
+    buttonY = 0;
+    buttonX2 = 0;
+    buttonY2 = 0;
+    movingPitX = 0;
+    movingPitY = 0;
+    movingPitSpawned = false;
+    bossX = 0;
+    bossY = 0;
+    bossSpawned = false;
+    bossDead = false;
+    bossHealth = 3;
+    bossFireCounter = 0;
+}
+
+void changeSpawn(){
+    //somewhat redundant function used to ensure that the player spawns in the correct position upon changing levels
+    if(changingLevel){
+        respawnPlayer();
+        respawnEnemies();
+        changingLevel = false;
+        reloadX = 0;
+        reloadY = 0;
+    }
+}
+
+void tiltGame(){
+    //stores the functions needed for the game to run
+    shootEnemy();
+    updateTime();
+    drawBorders();
+    whatLevel();
+    movePlayer();
+    collisions();
+    openDoorYet();
+    oled.display();
+    oled.clear(PAGE);
+}
+
+void collisions(){
+    //stores all collision functions
+    pitfallCollision();
+    collectCollision();
+    doorCollision();
+    enemyCollision();
+    reloadCollision();
+}
+
+bool overflowArray(int max, int counter){
+    //prevents the arrays used for pitfalls and collectables from overflowing by reseting them to 0 if they've hit their max
+    return (max == counter);
+}
+
+bool collisionCheck(int inputX, int inputY){
+    //sees if the player has collided with the inputted coords
+    if(abs(playerX - inputX) <= 2 && abs(playerY - inputY) <= 2){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+int whatQuarter(int inputX, int inputY){
+    //returns quarter number for inputted coords
+    Particle.process();
+    if (inputX > 32 && inputX < 64 && inputY > 8 && inputY <= 28){
+        return 1;
+    }else if (inputX >= 32 && inputX < 64 && inputY > 28 && inputY < 48){
+        return 2;
+    }else if (inputX > 0 && inputX < 32 && inputY >= 28 && inputY < 48){
+        return 3;
+    }else if (inputX > 0 && inputX <= 32 && inputY > 8 && inputY < 28){
+        return 4;
+    }
+}
+//========================================================================================================================
